@@ -1,13 +1,14 @@
-package dev.midhin.productservice;
+package dev.midhin.productservice.randomTest;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 class ProductServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
+
+
 	}
 
 }

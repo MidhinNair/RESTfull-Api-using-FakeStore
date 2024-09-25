@@ -5,6 +5,7 @@ import dev.midhin.productservice.Dtos.GenericProductDto;
 import dev.midhin.productservice.Exceptions.NotFontException;
 import dev.midhin.productservice.service.repo.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +17,9 @@ import org.springframework.web.client.RestTemplate;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service("fakeStoreProductServiceImpl")
+@Service
+@Qualifier("fakeStoreProductServiceImpl")
+
 public class FakeStoreProductServiceImpl implements ProductService {
     @Autowired
     private RestTemplateBuilder restTemplateBuilder;
@@ -44,6 +47,7 @@ public class FakeStoreProductServiceImpl implements ProductService {
 
     @Override
     public GenericProductDto getProductById(Long id) {
+        System.out.println("test in product service");
         RestTemplate restTemplate = restTemplateBuilder.build ();
 
         ResponseEntity<FakeStoreProductDto> response=

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service("selfProductServiceimpl")
+//@Service("selfProductServiceimpl")
 
 public class SelfProductServiceImpl implements ProductService {
     @Override
